@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Life in the UK Quiz</title>
+  <meta name="description" content="Practise for the Life in the UK test: unlimited questions or a daily five.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ── Home ─────────────────────────────────────────── -->
+  <section id="home" class="screen screen-home active">
+    <header class="home-header">
+      <span class="logo logo-light">LIFE IN THE UK</span>
+    </header>
+
+    <main class="home-main">
+      <div class="mode-grid">
+        <button class="mode-card" id="card-instant" type="button">
+          <div class="mode-art art-instant" aria-hidden="true">
+            <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMax slice">
+              <defs>
+                <linearGradient id="skyA" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#9aa3ad"/><stop offset="1" stop-color="#d9dcdf"/>
+                </linearGradient>
+              </defs>
+              <rect width="400" height="220" fill="url(#skyA)"/>
+              <circle cx="300" cy="120" r="70" fill="none" stroke="#5d646b" stroke-width="4"/>
+              <g stroke="#5d646b" stroke-width="2">
+                <line x1="300" y1="50" x2="300" y2="190"/><line x1="230" y1="120" x2="370" y2="120"/>
+                <line x1="250" y1="70" x2="350" y2="170"/><line x1="350" y1="70" x2="250" y2="170"/>
+              </g>
+              <path d="M280 220 L300 120 L320 220Z" fill="#4b5157"/>
+              <path d="M0 220 V170 H40 V150 H70 V175 H95 V140 H120 V180 H150 V160 H175 V220Z" fill="#3b4046"/>
+              <path d="M180 220 V95 H188 V70 L200 40 L212 70 V95 H220 V220Z" fill="#2b2f34"/>
+              <rect x="192" y="76" width="16" height="16" rx="8" fill="#c8ccd0"/>
+              <path d="M220 220 V150 H240 V130 H260 V220Z" fill="#33383d"/>
+              <path d="M360 220 V160 H400 V220Z" fill="#3b4046"/>
+            </svg>
+          </div>
+          <div class="mode-text">
+            <span class="mode-title">Instant Play</span>
+            <span class="mode-sub">Unlimited questions. Stop whenever the kettle boils.</span>
+          </div>
+        </button>
+
+        <button class="mode-card" id="card-daily" type="button">
+          <div class="mode-art art-daily" aria-hidden="true">
+            <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMax slice">
+              <defs>
+                <linearGradient id="skyB" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#7d858e"/><stop offset="1" stop-color="#cfd3d7"/>
+                </linearGradient>
+              </defs>
+              <rect width="400" height="220" fill="url(#skyB)"/>
+              <circle cx="90" cy="150" r="46" fill="#eef0f2" opacity=".8"/>
+              <g fill="#3a3f45">
+                <path d="M0 220 V140 L30 115 L60 140 V220Z"/>
+                <path d="M60 220 V140 L90 115 L120 140 V220Z"/>
+                <path d="M120 220 V140 L150 115 L180 140 V220Z"/>
+                <path d="M180 220 V140 L210 115 L240 140 V220Z"/>
+                <path d="M240 220 V140 L270 115 L300 140 V220Z"/>
+                <path d="M300 220 V140 L330 115 L360 140 V220Z"/>
+                <path d="M360 220 V140 L390 115 L420 140 V220Z"/>
+              </g>
+              <g fill="#b8bdc2">
+                <rect x="20" y="160" width="10" height="14"/><rect x="80" y="160" width="10" height="14"/>
+                <rect x="140" y="160" width="10" height="14"/><rect x="200" y="160" width="10" height="14"/>
+                <rect x="260" y="160" width="10" height="14"/><rect x="320" y="160" width="10" height="14"/>
+              </g>
+              <rect x="44" y="96" width="8" height="22" fill="#2b2f34"/><rect x="164" y="96" width="8" height="22" fill="#2b2f34"/>
+              <rect x="284" y="96" width="8" height="22" fill="#2b2f34"/>
+              <path d="M330 220 V170 H342 V150 H354 V220Z" fill="#c0392b" opacity=".85"/>
+            </svg>
+          </div>
+          <div class="mode-text">
+            <span class="mode-title">Daily</span>
+            <span class="mode-sub">5 a day, fresh at midnight. Like fruit, but for citizenship.</span>
+          </div>
+          <span class="mode-chip" id="daily-chip"></span>
+        </button>
+
+        <button class="mode-card" id="card-mock" type="button">
+          <div class="mode-art art-mock" aria-hidden="true">
+            <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMax slice">
+              <defs>
+                <linearGradient id="skyC" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#8a929b"/><stop offset="1" stop-color="#d4d7db"/>
+                </linearGradient>
+              </defs>
+              <rect width="400" height="220" fill="url(#skyC)"/>
+              <path d="M0 220 V185 H400 V220Z" fill="#3b4046"/>
+              <!-- red telephone box -->
+              <g transform="translate(250 40)">
+                <path d="M4 18 Q40 -6 76 18 V150 H4Z" fill="#a8322a"/>
+                <rect x="0" y="146" width="80" height="10" fill="#7e241e"/>
+                <rect x="10" y="22" width="60" height="12" fill="#2b2f34"/>
+                <g fill="#e6e8ea" opacity=".85">
+                  <rect x="14" y="42" width="15" height="15"/><rect x="32" y="42" width="15" height="15"/><rect x="50" y="42" width="15" height="15"/>
+                  <rect x="14" y="60" width="15" height="15"/><rect x="32" y="60" width="15" height="15"/><rect x="50" y="60" width="15" height="15"/>
+                  <rect x="14" y="78" width="15" height="15"/><rect x="32" y="78" width="15" height="15"/><rect x="50" y="78" width="15" height="15"/>
+                </g>
+                <rect x="14" y="100" width="52" height="40" fill="#8c2a23"/>
+              </g>
+              <!-- exam paper -->
+              <g transform="translate(60 120) rotate(-8)">
+                <rect width="110" height="80" rx="4" fill="#eef0f2"/>
+                <g fill="#5d646b"><rect x="12" y="14" width="70" height="6"/><rect x="12" y="30" width="86" height="4"/><rect x="12" y="42" width="80" height="4"/><rect x="12" y="54" width="60" height="4"/></g>
+                <circle cx="92" cy="62" r="11" fill="none" stroke="#a8322a" stroke-width="3"/>
+              </g>
+            </svg>
+          </div>
+          <div class="mode-text">
+            <span class="mode-title">Mock Test</span>
+            <span class="mode-sub">24 questions, 45 minutes. Fail and you're not good enough to be British.</span>
+          </div>
+          <span class="mode-chip">Pass: 18/24</span>
+        </button>
+      </div>
+      <p class="home-note"><span id="q-count"></span> questions on kings, battles, ballots and bank holidays. No queue required.</p>
+    </main>
+  </section>
+
+  <!-- ── Settings modal (Instant Play) ────────────────── -->
+  <div id="settings" class="modal-backdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+      <h2 id="settings-title">Game settings</h2>
+      <div class="segmented" role="radiogroup" aria-label="Timer">
+        <button type="button" role="radio" data-timer="0" aria-checked="true">No timer</button>
+        <button type="button" role="radio" data-timer="30" aria-checked="false">30s per question</button>
+      </div>
+      <button class="btn btn-primary btn-lg" id="start-instant" type="button">Play</button>
+      <button class="link-btn" data-close type="button">Cancel</button>
+    </div>
+  </div>
+
+  <!-- ── Game ─────────────────────────────────────────── -->
+  <section id="game" class="screen screen-game">
+    <header class="game-header">
+      <button class="logo logo-accent logo-btn" id="game-home" type="button" aria-label="Back to home">LIFE IN THE UK</button>
+      <div class="badge" aria-live="polite">
+        <div class="badge-cell"><span class="badge-label" id="badge-round-label">Round</span><span class="badge-value" id="badge-round">1/5</span></div>
+        <div class="badge-cell"><span class="badge-label" id="badge-score-label">Score</span><span class="badge-value" id="badge-score">0</span></div>
+        <div class="badge-cell" id="badge-streak-cell" hidden><span class="badge-label">Streak</span><span class="badge-value" id="badge-streak">0</span></div>
+      </div>
+    </header>
+
+    <main class="game-main">
+      <article class="q-card">
+        <div class="q-meta">
+          <span class="q-cat" id="q-cat"></span>
+          <span class="q-hint" id="q-hint"></span>
+        </div>
+        <h1 class="q-text" id="q-text"></h1>
+        <div class="options" id="options"></div>
+      </article>
+
+      <aside class="panel">
+        <div class="timer" id="timer" hidden><div class="timer-fill" id="timer-fill"></div><span class="timer-text" id="timer-text"></span></div>
+        <div class="panel-body" id="panel-body">
+          <p class="panel-status" id="panel-status">Select an answer</p>
+          <button class="btn btn-primary" id="submit" type="button" disabled>Submit</button>
+        </div>
+        <div class="reveal" id="reveal" hidden>
+          <p class="reveal-title" id="reveal-title"></p>
+          <p class="reveal-explain" id="reveal-explain"></p>
+          <button class="btn btn-primary" id="next" type="button">Next</button>
+        </div>
+      </aside>
+
+      <button class="link-btn end-btn" id="end-instant" type="button" hidden>End game</button>
+    </main>
+  </section>
+
+  <!-- ── Results modal ────────────────────────────────── -->
+  <div id="results" class="modal-backdrop" hidden>
+    <div class="modal modal-results" role="dialog" aria-modal="true" aria-labelledby="results-title">
+      <h2 id="results-title"></h2>
+      <p class="verdict" id="results-verdict" hidden></p>
+      <p class="big-score" id="results-score"></p>
+      <p class="results-sub" id="results-sub"></p>
+      <div class="emoji-row" id="results-emoji"></div>
+      <ol class="results-list" id="results-list"></ol>
+      <p class="countdown" id="results-countdown"></p>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" id="results-share" type="button">Share</button>
+        <button class="btn btn-primary" id="results-again" type="button">Play again</button>
+        <button class="btn btn-secondary" id="results-home" type="button">Home</button>
+      </div>
+      <p class="toast" id="toast" role="status"></p>
+    </div>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
